@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from "prop-types";
-import './App.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import './App.css'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+  constructor (props) {
+    super(props)
+    this.state = {}
   }
 
-  render() {
+  render () {
     return (
       <div className="App">
         <header className="App-header">
@@ -19,12 +19,12 @@ class App extends Component {
         </p>
         {this.props.children}
       </div>
-    );
+    )
   }
 }
 
 App.propTypes = {
   children: PropTypes.object.isRequired
-};
+}
 
-export default App;
+export default App
