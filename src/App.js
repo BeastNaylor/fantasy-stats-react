@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className="App">
         <header className="App-header">
@@ -12,8 +12,8 @@ class App extends Component {
           A collection of statistics based on the Barclays Fantasty Football site
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
