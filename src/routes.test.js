@@ -4,7 +4,7 @@ import { mount } from 'enzyme'
 import Home from './components/home/home'
 import League from './components/league/league'
 import NotFound from './components/notfound/notfound'
-import { MemoryRouter } from 'react-router'
+import { MemoryRouter } from 'react-router-dom'
 import Routes from './routes'
 
 const renderRoutes = path =>
@@ -20,7 +20,7 @@ describe('#routes', () => {
     expect(component.find(Home)).toHaveLength(1)
   })
   it('renders about page for league', () => {
-    const component = renderRoutes('/league')
+    const component = renderRoutes('/league/1')
 
     expect(component.find(League)).toHaveLength(1)
   })
