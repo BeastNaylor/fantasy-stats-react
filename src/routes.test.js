@@ -7,6 +7,8 @@ import NotFound from './components/notfound/notfound'
 import { MemoryRouter } from 'react-router-dom'
 import Routes from './routes'
 
+jest.mock('./api/request')
+
 const renderRoutes = path =>
   mount(
     <MemoryRouter initialEntries={[path]}>

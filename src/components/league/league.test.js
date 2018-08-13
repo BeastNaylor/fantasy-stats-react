@@ -2,6 +2,8 @@ import React from 'react'
 import {mount} from 'enzyme'
 import League from './league'
 
+jest.mock('../../api/request')
+
 const render = props => {
   const defaultProps = {
     match: {
@@ -19,4 +21,9 @@ const render = props => {
 it('it renders the league code', () => {
   var component = render({match: {params: {code: '999'}}})
   expect(component.find('h1').text()).toEqual('This is League 999')
+})
+
+it('it loads successfully', () => {
+  var component = render({match: {params: {code: '999'}}})
+  expect(component.state('isLoading')).toEqual(true)
 })
